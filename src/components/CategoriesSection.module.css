@@ -1,0 +1,80 @@
+.sectionWrapper {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 auto 20px auto;
+}
+.viewAll {
+  color: #003366;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;                   /* Less gap between circles */
+  justify-items: center;
+}
+
+@media (min-width: 1024px) {
+  .categoryGrid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.iconCircle {
+  width: 90px;               /* Larger circle */
+  height: 90px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.3s ease;
+}
+
+.iconCircle img {
+  width: 55px;               /* Larger image */
+  height: 55px;
+}
+
+.iconCircle:hover {
+  border: 2px solid #000;     /* Black stroke on hover */
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+

@@ -1,0 +1,12 @@
+/* src/styles/global.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* White background */
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
