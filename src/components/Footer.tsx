@@ -1,85 +1,75 @@
-import React from 'react';
-import styles from './Footer.module.css';
-import { FaApple, FaGooglePlay, FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaPhone } from 'react-icons/fa';
-import logo from '../assets/images/white-logo.png';
-import bgCircle from '../assets/images/Bg.png';
+import React from "react";
+import styles from "./Footer.module.css";
+import { FaWhatsapp, FaPhoneAlt, FaApple, FaGooglePlay } from "react-icons/fa";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
-      <img src={bgCircle} alt="Background" className={styles.bgCircle} />
-
-      <div className={styles.footerContent}>
-        {/* Left Section */}
-        <div className={styles.leftSection}>
-          <img src={logo} alt="Logo" className={styles.logo} />
-
-          <h3 className={styles.contactTitle}>Contact Us</h3>
-
-          <div className={styles.contactItem}>
-            <FaWhatsapp className={styles.icon} />
-            <div>
-              <p>WhatsApp</p>
-              <strong>+1 234 567 890</strong>
-            </div>
-          </div>
-
-          <div className={styles.contactItem}>
-            <FaPhone className={styles.icon} />
-            <div>
-              <p>Call Us</p>
-              <strong>+1 987 654 321</strong>
-            </div>
-          </div>
-
-          <div className={styles.appButtons}>
-            <div className={styles.appStore}>
-              <FaApple className={styles.icon} />
+      <div className={styles.footerTop}>
+        <div className={styles.column}>
+          <h2 className={styles.logo}>ALMIR CO.</h2>
+          <div className={styles.contact}>
+            <div className={styles.contactItem}>
+              <FaWhatsapp className={styles.icon} />
               <div>
-                <span>Download on the</span><br />
-                <strong>App Store</strong>
+                <p className={styles.contactLabel}>WhatsApp</p>
+                <a className={styles.contactLink} href="tel:1-844-370-1777">1-844-370-1777</a>
               </div>
-            </div> <div className={styles.playStore}>
-              <FaGooglePlay className={styles.icon} />
+            </div>
+            <div className={styles.contactItem}>
+              <FaPhoneAlt className={styles.icon} />
               <div>
-                <span>Get it on</span><br />
-                <strong>Google Play</strong>
+                <p className={styles.contactLabel}>Call Us</p>
+                <a className={styles.contactLink} href="tel:1-844-370-1777">1-844-370-1777</a>
               </div>
             </div>
           </div>
+
+          <div className={styles.download}>
+            <a href="#" className={styles.storeBtn}>
+              <FaApple className={styles.storeIcon} />
+              <div className={styles.btnText}>
+                <span className={styles.smallText}>Download on the</span>
+                <span className={styles.bigText}>App Store</span>
+              </div>
+            </a>
+
+            <a href="#" className={styles.storeBtn}>
+              <FaGooglePlay className={styles.storeIconPlay} />
+              <div className={styles.btnText}>
+                <span className={styles.smallText}>Get it on</span>
+                <span className={styles.bigText}>Google Play</span>
+              </div>
+            </a>
+          </div>
+
         </div>
 
-        {/* Center Section */}
-        <div className={styles.centerSection}>
-          <div>
-            <h3 className={styles.sectionTitle}>Most Popular Categories</h3>
-            <ul>
-              <li>Mobile Phones</li>
-              <li>Laptops</li>
-              <li>Accessories</li>
-              <li>Gaming Consoles</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className={styles.sectionTitle}>Customer Services</h3>
-            <ul>
-              <li>Contact Us</li>
-              <li>FAQs</li>
-              <li>Warranty Policy</li>
-              <li>Return Policy</li>
-            </ul>
-          </div>
+        <div className={styles.column}>
+          <h4 className={styles.heading}>Most Popular Categories</h4>
+          <ul className={styles.list}>
+            <li>Phone</li>
+            <li>Laptop</li>
+            <li>Playstation</li>
+            <li>Accessories</li>
+            <li>Earbuds</li>
+          </ul>
+        </div>
+
+        <div className={styles.column}>
+          <h4 className={styles.heading}>Customer Services</h4>
+          <ul className={styles.list}>
+            <li>About Us</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+            <li>Privacy Policy</li>
+            <li>Cancellation & Return Policy</li>
+          </ul>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className={styles.bottomBar}>
-        <p>© 2025 YourCompany. All rights reserved.</p>
-        <div className={styles.socialIcons}>
-          <FaFacebookF />
-          <FaTwitter />
-          <FaInstagram />
-        </div>
+      <div className={styles.footerBottom}>
+        <p>© 2023 All rights reserved. Almir Co.</p>
       </div>
     </footer>
   );

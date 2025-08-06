@@ -6,20 +6,23 @@ import xiaomiImg from '../assets/images/XIAOMI.png';
 import rectangleBg from '../assets/images/Bg.png';
 import miLogo from '../assets/images/mi-logo.png';
 import { FaArrowRight, FaApple } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 
 const BrandsSection = () => {
   return (
     <div className={styles.sectionWrapper}>
-      <div className={styles.header}>
-        <h2>TOP Electronics Brands</h2>
-        <span className={styles.viewAll}>
-          View All <FaArrowRight />
-        </span>
+      <div className={styles.headerContainer}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>TOP Electronics Brands</h2>
+          <div className={styles.viewAll}>
+          <span>View All</span>
+          <FaChevronRight className={styles.icon} />
+        </div>
+        </div>
+        <hr className={styles.divider} />
       </div>
-      <hr className={styles.divider} />
 
       <div className={styles.brandCards}>
-        
         {/* First Card - iPhone */}
         <div className={styles.card} style={{ backgroundColor: '#1b1b1bff' }}>
           <img src={rectangleBg} alt="bg" className={styles.bgCircle} />
@@ -46,7 +49,6 @@ const BrandsSection = () => {
           <p className={styles.discount} style={{ color: '#000' }}>UP TO 80% OFF</p>
           <img src={xiaomiImg} alt="Xiaomi" className={styles.realmephoneImg} />
         </div>
-
       </div>
     </div>
   );

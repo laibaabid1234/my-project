@@ -1,139 +1,145 @@
 .footer {
+  background-color: #011627;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px 20px;
   position: relative;
-  background-color: #2c3e50; /* Dark Blue */
-  color: #fff;
-  padding: 60px 20px 30px 20px;
   overflow: hidden;
 }
 
-.bgCircle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 400px;
-  opacity: 0.05;
-  z-index: 0;
-}
-
-.footerContent {
+.footerTop {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
+  justify-content: space-between;
+  gap: 40px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-.leftSection {
-  flex: 1;
-  min-width: 250px;
+.column {
+  flex: 1 1 250px;
+  min-width: 200px;
 }
 
 .logo {
-  width: 150px;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
-.contactTitle {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 12px;
+.contact {
+  margin-top: 10px;
 }
 
 .contactItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
-  margin-bottom: 12px;
-}
-
-.contactItem p {
-  margin: 0;
-  font-size: 13px;
-}
-
-.contactItem strong {
-  font-size: 14px;
+  margin-bottom: 16px;
 }
 
 .icon {
-  font-size: 30px;
+  font-size: 18px;
+  margin-top: 4px;
+  color: #ffffff;
 }
 
-.appButtons {
+.contactLabel {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.download {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-.appStore,
-.playStore {
+.storeBtn {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #000000;
+  background-color: #000000;
   color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px 16px;
   width: fit-content;
-}
-
-.appStore span,
-.playStore span {
-  font-size: 15px;
-  line-height: 1;
-}
-
-.appStore strong,
-.playStore strong {
-  font-size: 22px;
-  line-height: 1;
-}
-
-.centerSection {
-  flex: 2;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  min-width: 300px;
-  margin-top: 20px;
-}
-
-.centerSection h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.sectionTitle::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  margin-top: 4px;
-}
-
-.centerSection ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.centerSection li {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-.bottomBar {
+  min-width: 160px;
   margin-top: 30px;
+}
+
+.storeIcon,
+.storeIconPlay {
+  font-size: 32px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.btnText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.smallText {
+  font-size: 13px;
+}
+
+.bigText {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.list {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-left: 0;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 20px;
   text-align: center;
-  font-size: 12px;
-  border-top: 1px solid #555;
-  padding-top: 10px;
-  position: relative;
-  z-index: 1;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .download {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

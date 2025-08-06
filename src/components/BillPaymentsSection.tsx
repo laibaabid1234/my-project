@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './BillPaymentsSection.module.css';
-import { FaChevronRight } from 'react-icons/fa'; 
+import { FaChevronRight } from 'react-icons/fa';
 import logo1 from '../assets/images/logo-1.png';
 import logo2 from '../assets/images/logo-2.png';
 
@@ -29,7 +29,7 @@ const billCards = [
     title: 'Truly Unlimited',
     features: ['Unlimited talk', 'Unlimited Text', '5GB hotspot'],
   },
-   {
+  {
     id: 4,
     logo: logo2,
     originalPrice: '$90.00',
@@ -37,7 +37,7 @@ const billCards = [
     title: '2GB Data 5G',
     features: ['Unlimited talk', 'Unlimited Text', '$5 Intl Calling Credit'],
   },
-   {
+  {
     id: 5,
     logo: logo1,
     originalPrice: '$99.00',

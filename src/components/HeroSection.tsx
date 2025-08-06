@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './HeroSection.module.css';
-import phonesImage from '../assets/images/phones.png'; 
+import phonesImage from '../assets/images/phones.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'; 
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const HeroSection: React.FC = () => {
   return (

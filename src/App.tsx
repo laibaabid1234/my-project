@@ -6,22 +6,22 @@ import AllProducts from './components/AllProductsSection';
 import BillPayments from './components/BillPaymentsSection';
 import TopCategoriesSection from './components/CategoriesSection';
 import BrandsSection from './components/BrandsSection';
-
-
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-  <div style={{paddingBottom: '10px', paddingTop: '150px'}}>
-    <Navbar />
-  </div>
-  <HeroSection />
-   <SupportBanner />
-   <AllProducts />
-   <BillPayments/>
-   <TopCategoriesSection/>
-   <BrandsSection/>
-</>
+      <div style={{ paddingBottom: '10px', paddingTop: '150px' }}>
+        <Navbar />
+      </div>
+      <HeroSection />
+      <SupportBanner />
+      <AllProducts />
+      <BillPayments />
+      <TopCategoriesSection />
+      <BrandsSection />
+      <Footer />
+    </>
   );
 }
 

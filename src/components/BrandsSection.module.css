@@ -1,32 +1,45 @@
 .sectionWrapper {
-  margin: 40px auto;
-  width: 95%;
+  width: 97%;
+  margin: 0 auto 40px auto;
+}
+
+.headerContainer {
+  width: 100%;
 }
 
 .header {
+  max-width: 1200px; 
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-.header h2 {
-  font-size: 18px;
-  font-weight: 700;
+.title {
+  font-size: 24px;
+  font-weight: 600;
   color: #000;
 }
 
 .viewAll {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   color: #000;
   cursor: pointer;
-  gap: 4px;
+}
+
+.icon {
+  margin-left: 5px;
+  font-size: 12px;
 }
 
 .divider {
-  margin: 8px 0 20px 0;
-  border: 0.5px solid #ddd;
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 0 auto 20px auto;
+  max-width: 1200px; 
 }
 
 .brandCards {
@@ -37,7 +50,7 @@
 }
 
 .card {
-  width: 400px;
+  width: 360px; /* Adjusted for alignment */
   height: 230px;
   padding: 20px;
   display: flex;
@@ -49,7 +62,6 @@
   overflow: hidden;
 }
 
-
 .bgCircle {
   position: absolute;
   right: 0;
@@ -58,7 +70,6 @@
   opacity: 0.2;
   z-index: 0;
 }
-
 
 .iPhonebrandName {
   position: absolute;
@@ -101,7 +112,7 @@
 
 .appleLogo, .miBox {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 15px;
   transform: translateY(-50%);
   background-color: #fff;
@@ -144,7 +155,6 @@
   z-index: 2;
 }
 
-
 .phoneImg {
   height: 320px;
   position: absolute;
@@ -156,9 +166,9 @@
 }
 
 .realmephoneImg {
-  height: 320px;
+  height: 300px;
   position: absolute;
-  right: 3px;
+  right: -20px;
   top: 75%;
   transform: translateY(-50%);
   object-fit: contain;
@@ -168,13 +178,11 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .card {
-    flex: 1 1 100%;  /* Take full width */
-    max-width: 100%;
+    width: 100%;
   }
 
-  .phoneImg {
-    height: 200px;  /* Smaller image */
-    right: 10px;
+  .phoneImg, .realmephoneImg {
+    height: 200px;
   }
 
   .appleLogo, .miBox {

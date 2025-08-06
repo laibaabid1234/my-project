@@ -3,10 +3,24 @@
   margin: 0 auto 40px auto;
 }
 
+.sectionWrapper {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -18,34 +32,38 @@
 .viewAll {
   display: flex;
   align-items: center;
-  color: #555;
   font-size: 14px;
+  color: #000;
   cursor: pointer;
-  gap: 6px;
 }
 
 .icon {
+  margin-left: 5px;
   font-size: 12px;
 }
 
-.line {
+.divider {
   border: none;
-  border-bottom: 1px solid #ccc;
-  margin: 5px 0 15px 0; /* LESS gap */
+  border-top: 2px solid #ddd;
+  margin: 0 auto 20px auto;
+  max-width: 1200px;
 }
 
 .productsGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Fix: only 5 cards */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* Responsive */
   gap: 15px;
+  margin-top: 20px;
 }
 
 .productCard {
-  background-color: #f9f9f9; /* light gray */
+  background-color: #f9f9f9;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
   position: relative;
+  width: 100%;
 }
 
 .imageWrapper {
@@ -92,8 +110,9 @@
 
 .originalPrice {
   text-decoration: line-through;
-  color: red; /* RED original price */
+  color: red;
 }
+
 
 /* Responsive */
 @media (max-width: 1024px) {
